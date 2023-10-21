@@ -1,0 +1,144 @@
+<pre></pre>
+<div>
+  <section style="width: 100%; height: 13cm">
+    <pre></pre>
+    <pre></pre>
+    <pre></pre>
+    <pre></pre>
+    <pre></pre>
+    <pre></pre>
+    <pre></pre>
+    <pre></pre>
+    <h1
+      style="
+        text-align: center;
+        color: white;
+        font-size: 1.5cm;
+        font-weight: bold;
+      "
+    >
+      Make your picture perfect
+    </h1>
+    <pre></pre>
+    <h1
+      style="
+        text-align: center;
+        color: white;
+        font-size: 1.5cm;
+        font-weight: bold;
+      "
+    >
+      home with us
+    </h1>
+    <table style="margin-left: 72%">
+      <pre></pre>
+      <pre></pre>
+      <pre></pre>
+      <pre></pre>
+      <pre></pre>
+      <pre></pre>
+      <pre></pre>
+      <pre></pre>
+      <pre></pre>
+      <tr>
+        <td>
+          <h1
+            style="
+              text-align: center;
+              color: white;
+              font-size: 0.9cm;
+              font-weight: bold;
+            "
+          >
+            100K+
+          </h1>
+        </td>
+        <td>
+          <h1
+            style="
+              text-align: center;
+              color: white;
+              font-size: 0.9cm;
+              font-weight: bold;
+              margin-left: 1cm;
+            "
+          >
+            Google
+          </h1>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h1
+            style="
+              text-align: center;
+              color: white;
+              font-size: 0.6cm;
+              font-weight: normal;
+            "
+          >
+            Subscribers
+          </h1>
+        </td>
+        <td>
+          <h1
+            style="
+              text-align: center;
+              color: white;
+              font-size: 0.6cm;
+              font-weight: normal;
+              margin-left: 1cm;
+            "
+          >
+            4.5<img
+              src="/assets/Star.png"
+              height="24"
+              style="margin-top: -0.15cm; margin-left: 0.1cm"
+            />
+          </h1>
+        </td>
+      </tr>
+    </table>
+  </section>
+</div>
+<pre></pre>
+<pre></pre>
+<img src="/assets/brline.JPG" height="40" style="margin-left: 7.7cm" />
+<p style="margin-left: 11.6cm">
+  If you are looking for a perfect furniture for your room! Explore now
+</p>
+<pre></pre>
+<div class="grid-container1">
+  <div
+    class="card"
+    id="cart-products"
+    style="width: 15rem"
+    *ngFor="let card of companyProductsList"
+  >
+    <img
+      class="card-img-top"
+      id="card-img"
+      style="padding: 1"
+      src="/assets/File/{{ card.productImagePath }}"
+    />
+    <div class="card-body" style="text-align: center">
+      <a href="" style="text-decoration: none; color: rgb(36, 120, 154)">{{
+        card.productName
+      }}</a>
+      <div>{{ card.description }}</div>
+      <strong>{{ card.productPrice | currency : "INR" }}</strong>
+      <div class="refurnished">Refurnished</div>
+      <div class="best-seller">For Sale</div>
+    </div>
+  </div>
+</div>
+<pre></pre>
+<pre></pre>
+<pre></pre>
+<button
+  *ngIf="!allProductsLoaded && firstFourProductsLoaded"
+  (click)="loadAllProducts()"
+  class="btn btn-secondary"
+>
+  Load More
+</button>

@@ -1,0 +1,27 @@
+a {
+    color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
+    text-decoration: none; 
+}
+
+li{
+    padding: 5%;
+    font-size: medium;
+    color: rgb(82, 82, 82);
+}
+
+h5{
+    margin-left: 0.35cm;
+    font-size: medium;
+    font-weight: 420;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+.items-center {
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}

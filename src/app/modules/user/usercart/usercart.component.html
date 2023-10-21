@@ -1,0 +1,184 @@
+<!-- <div>
+  <div class="grid-container1">
+    <div *ngFor="let product of cart?.productsInCart">
+      <div class="row">
+        <div class="col-12 mt-3">
+          <div class="card" id="cart-products" style="width: 15rem">
+            <div class="card-horizontal">
+              <img
+                id="card-img"
+                style="padding: 1"
+                src="/assets/File/{{ product.productImagePath }}"
+                height="220"
+                width="240"
+              />
+            </div>
+
+            <div class="card-body" style="text-align: center">
+              <h4 class="card-title" style="text-align: center">
+                {{ product.productName }}
+              </h4>
+
+              <pre></pre>
+
+              <div>
+                {{ product.description }}
+              </div>
+
+              <pre></pre>
+
+              <div>{{ product.productPrice | currency : "INR" }}</div>
+
+              <pre></pre>
+
+              <div>
+                <a (click)="removeProduct(product)"
+                  ><i class="fa fa-trash" style="font-size: 15px; color: red">
+                  </i
+                  >Remove From Cart</a
+                >
+              </div>
+
+              <pre></pre>
+            </div>
+
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <pre></pre>
+  <pre></pre>
+  <pre></pre>
+  <hr />
+  <table style="margin-left: 1.8cm">
+    <tr>
+      <td><b>Price Details</b></td>
+      <td></td>
+    </tr>
+    <pre></pre>
+    <tr>
+      <td>Total Quantity</td>
+      <td>{{ cart.quantity }}</td>
+    </tr>
+    <tr>
+      <td>Tptal MRP</td>
+      <td>{{ cart.totalCost | currency : "INR" }}</td>
+    </tr>
+    <tr>
+      <td>Shipping Charges</td>
+      <td style="color: green">Free</td>
+    </tr>
+    <tr>
+      <td>Coupon Discount</td>
+      <td style="color: green">Apply Coupon</td>
+    </tr>
+    <hr style="width: 5cm" />
+    <tr>
+      <td><b>Order Total:</b></td>
+      <td>{{ cart.totalCost | currency : "INR" }}</td>
+    </tr>
+  </table>
+  <pre></pre>
+  <pre></pre>
+  <button class="btn btn-primary" routerLink="/user/checkout">
+    Proceed to pay
+  </button>
+</div> -->
+<table>
+  <tr>
+    <td>
+      <h2>My Cart ({{ cart.quantity }})</h2>
+    </td>
+    <td>
+      <a routerLink="/user/home">Shop More ></a>
+    </td>
+  </tr>
+  <tr>
+    <div class="grid-container1">
+      <div *ngFor="let product of cart?.productsInCart">
+        <div class="row">
+          <div class="col-12 mt-3">
+            <div class="card" id="cart-products" style="width: 15rem">
+              <div class="card-horizontal">
+                <img
+                  id="card-img"
+                  style="padding: 1"
+                  src="/assets/File/{{ product.productImagePath }}"
+                  height="220"
+                  width="240"
+                />
+              </div>
+
+              <div class="card-body" style="text-align: center">
+                <h4 class="card-title" style="text-align: center">
+                  {{ product.productName }}
+                </h4>
+
+                <pre></pre>
+
+                <div>
+                  {{ product.description }}
+                </div>
+
+                <pre></pre>
+
+                <div>{{ product.productPrice | currency : "INR" }}</div>
+
+                <pre></pre>
+
+                <div>
+                  <a (click)="removeProduct(product)"
+                    ><i class="fa fa-trash" style="font-size: 15px; color: red">
+                    </i
+                    >Remove From Cart</a
+                  >
+                </div>
+
+                <pre></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre></pre>
+    <pre></pre>
+    <pre></pre>
+    <hr />
+    <table style="margin-left: 1.8cm">
+      <tr>
+        <td><b>Price Details</b></td>
+        <td></td>
+      </tr>
+      <pre></pre>
+      <tr>
+        <td>Total Quantity</td>
+        <td>{{ cart.quantity }}</td>
+      </tr>
+      <tr>
+        <td>Tptal MRP</td>
+        <td>{{ cart.totalCost | currency : "INR" }}</td>
+      </tr>
+      <tr>
+        <td>Shipping Charges</td>
+        <td style="color: green">Free</td>
+      </tr>
+      <tr>
+        <td>Coupon Discount</td>
+        <td style="color: green">Apply Coupon</td>
+      </tr>
+      <hr style="width: 5cm" />
+      <tr>
+        <td><b>Order Total:</b></td>
+        <td>{{ cart.totalCost | currency : "INR" }}</td>
+      </tr>
+    </table>
+    <pre></pre>
+    <pre></pre>
+    <button class="btn btn-primary" routerLink="/user/checkout">
+      Proceed to pay
+    </button>
+  </tr>
+</table>

@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="main">
+    <div class="card">
+      <div class="card-body">
+        <h3>Update Information</h3>
+        <hr />
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="auth.userFirstName"
+                />
+              </td>
+            </tr>
+            <br />
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="auth.userLastName"
+                />
+              </td>
+            </tr>
+            <br />
+            <tr>
+              <td>
+                <input
+                  type="email"
+                  class="form-control"
+                  [(ngModel)]="auth.emailId"
+                  [disabled]="true"
+                />
+              </td>
+            </tr>
+            <br />
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="auth.mobileNo"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <pre></pre>
+        <button class="btn btn-secondary" (click)="onUpdateClick()">
+          Update Profile
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

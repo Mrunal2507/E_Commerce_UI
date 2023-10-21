@@ -1,0 +1,83 @@
+<div class="grid-container">
+  <div *ngFor="let data of orders">
+    <div class="card1">
+      <table>
+        <tr>
+          <td style="width: 25cm">
+            <div class="card-title">Order Id: {{ data.orderId }}</div>
+          </td>
+          <td style="color: green; font-weight: bold">Accepted</td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              Ordered By:
+              <strong
+                >{{ data.auth.userFirstName }}
+                {{ data.auth.userLastName }}</strong
+              >
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>Quantity: {{ data.quantity }}</div>
+          </td>
+        </tr>
+      </table>
+      <hr />
+      <div class="card-body">
+        <div *ngFor="let products of data.products">
+          <table>
+            <tr>
+              <td style="width: 9cm">
+                <div>
+                  Product Name:
+                  <strong style="color: #0b3d72">{{
+                    products.productName
+                  }}</strong>
+                </div>
+              </td>
+              <td>
+                <div>
+                  Product Price:
+                  <strong>{{
+                    products.productPrice | currency : "INR"
+                  }}</strong>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <hr />
+        <table>
+          <tr>
+            <td style="width: 9cm">
+              <div>
+                Ordered Date: {{ data.orderDate | date : "dd-MM-yyyy" }}
+              </div>
+            </td>
+            <td>
+              <div>
+                Grand Total:
+                <button class="btn btn-warning">
+                  {{ data.cost | currency : "INR" }}
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                Dispatch Date: {{ data.dispatchDate | date : "dd-MM-yyyy" }}
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <pre></pre>
+    <pre></pre>
+    <pre></pre>
+  </div>
+</div>

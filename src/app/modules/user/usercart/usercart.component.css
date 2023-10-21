@@ -1,0 +1,44 @@
+.grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+}
+
+.card{
+    margin-top: 0.8cm;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#card-img {
+    height: 170px;
+    width: 100%;
+    padding: 8px 8px 8px 8px;
+}
+
+#card-img:hover{
+    transform: scale(1.3);
+}
+
+.btn{
+    margin-left: 10%;
+    background-color: #300a77;
+    border-color: #300a77;
+}
+
+.btn:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+h2{
+    margin-left: 1.5cm;
+    margin-top: 0.8cm;
+}
+
+.row{
+    margin-left: 1cm;
+}

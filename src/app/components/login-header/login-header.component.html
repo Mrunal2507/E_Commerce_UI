@@ -1,0 +1,53 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light"
+  style="
+    position: sticky;
+    z-index: 999;
+    top: -10px;
+    box-shadow: -6px 5px 5px rgba(151, 151, 151, 0.5);
+  "
+>
+  <div style="padding-left: 2%">
+    <img
+      src="/assets/fLOGO1.png"
+      width="130px"
+      height="52px"
+      style="padding-top: 0.18cm"
+      routerLink="/admin/home"
+    />
+  </div>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding-left: 10%">
+      <li class="nav-item active" style="margin-top: 0.2cm">
+        <a
+          href="#"
+          class="nav-link"
+          [class.success]="isActive[0]"
+          (click)="activateButton(0)"
+          >Maple Group |</a
+        >
+      </li>
+      <li class="lvl1 parent megamenu" style="margin-top: 0.4cm">
+        <a>About Us |</a>
+      </li>
+      <li class="lvl1 parent megamenu" style="margin-top: 0.4cm">
+        <a>Customer Care |</a>
+      </li>
+      <li class="lvl1 parent megamenu" style="margin-top: 0.4cm">
+        <a>Find Branch</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<pre></pre>
+<h4
+  style="
+    margin-left: 7.2cm;
+    margin-top: 0.4cm;
+    font-size: 15px;
+    font-weight: 500;
+  "
+  class="loginTitle"
+>
+  Login to Nice Maple
+</h4>

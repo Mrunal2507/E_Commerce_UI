@@ -1,0 +1,56 @@
+/* Global Styles */
+.grid-container {
+    display: grid;
+  }
+  
+  /* Card Styles */
+  .card1 {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 60%; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-left: 5%;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .card-body {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Product Styles */
+  div[role="product"] {
+    margin-top: 10px;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  /* Custom Colors */
+  .style-primary {
+    color: #0b3d72;
+  }
+  
+  .style-danger {
+    color: rgb(113, 17, 17);
+  }
+  
+  /* Custom Spacing */
+  pre {
+    margin: 10px 0;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

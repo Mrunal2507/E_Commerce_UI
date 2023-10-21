@@ -1,0 +1,49 @@
+<pre></pre>
+<div class="grid-container1">
+  <div
+    class="card"
+    id="cart-products"
+    style="width: 15rem"
+    *ngFor="let product of UserProductsList"
+  >
+    <img
+      class="sa"
+      style="padding: 1"
+      src="/assets/File/{{ product.userProductImage }}"
+      height="220"
+      width="240"
+    />
+    <div class="card-body" style="text-align: center">
+      <a href="" style="text-decoration: none; color: rgb(36, 120, 154)">{{
+        product.userProductName
+      }}</a>
+      <div>Product Id: {{ product.userProductId }}</div>
+      <div>
+        <strong>{{ product.userProductPrice | currency : "INR" }}</strong>
+      </div>
+      <div>
+        Requested By:
+        <strong
+          >{{ product.auth.userFirstName }}
+          {{ product.auth.userLastName }}</strong
+        >
+      </div>
+      <div>
+        Requested On:
+        <strong>{{ product.requestDate | date : "dd-MM-yyyy" }}</strong>
+      </div>
+      <div
+        [ngClass]="{
+          'green-text': product.approvalStatus === 'Accepted',
+          'red-text': product.approvalStatus === 'Rejected',
+          'warn-text': product.approvalStatus === 'Pending'
+        }"
+      >
+        {{ product.approvalStatus }}
+      </div>
+      <div *ngIf="product.approvalStatus === 'Accepted'" class="best-seller">
+        For Sale
+      </div>
+    </div>
+  </div>
+</div>

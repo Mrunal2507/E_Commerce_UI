@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="main">
+    <div class="card">
+      <div class="card-body">
+        <h3>Personal Information</h3>
+        <hr />
+        <table>
+          <tbody>
+            <tr>
+              <td><b>Frist Name</b></td>
+              <td><b>:</b></td>
+              <td>
+                <i>{{ auth.userFirstName }}</i>
+              </td>
+            </tr>
+            <br />
+            <tr>
+              <td><b>Last Name</b></td>
+              <td><b>:</b></td>
+              <td>
+                <i>{{ auth.userLastName }}</i>
+              </td>
+            </tr>
+            <br />
+            <tr>
+              <td><b>Email Address</b></td>
+              <td><b>:</b></td>
+              <td>
+                <i>{{ auth.emailId }}</i>
+              </td>
+            </tr>
+            <br />
+            <tr>
+              <td><b>Mobile Number</b></td>
+              <td><b>:</b></td>
+              <td>
+                <i>{{ auth.mobileNo }}</i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <pre></pre>
+        <button class="btn btn-secondary" (click)="openProfileDialog()">
+          Edit Profile
+        </button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="main">
+    <div class="card">
+      <div class="card-body">
+        <h3>Login Credentials</h3>
+        <hr />
+        <table>
+          <tbody>
+            <tr>
+              <td><b>UserName</b></td>
+              <td><b>:</b></td>
+              <td>
+                <i>{{ auth.emailId }}</i>
+              </td>
+            </tr>
+            <br />
+            <tr>
+              <td><b>Password</b></td>
+              <td><b>:</b></td>
+              <td>
+                <i
+                  ><input
+                    [type]="showPassword ? 'text' : 'password'"
+                    [value]="auth.userPassword"
+                    readonly />
+                  <i
+                    class="fa fa-eye"
+                    aria-hidden="true"
+                    [ngClass]="{
+                      'fa-eye-slash': !showPassword,
+                      'fa-eye': showPassword
+                    }"
+                    (click)="togglePasswordVisibility()"
+                  ></i
+                ></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <pre></pre>
+        <button class="btn btn-secondary" (click)="openProfileDialog1()">
+          Edit Credentials
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

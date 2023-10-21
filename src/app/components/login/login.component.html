@@ -1,0 +1,137 @@
+<div style="background-color: #fbfbfb">
+  <app-login-header></app-login-header>
+  <link
+    href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    rel="stylesheet"
+    id="bootstrap-css"
+  />
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  <table>
+    <tr>
+      <td>
+        <div class="wrapper">
+          <div id="formContent">
+            <!-- Tabs Titles -->
+            <div class="fadeIn first" style="margin-top: -0.4cm">
+              <mat-button-toggle-group
+                #toggleBtn="matButtonToggleGroup"
+                value="Login"
+                style="box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1)"
+              >
+                <mat-button-toggle
+                  value="Login"
+                  class="mat-button-toggle active"
+                  style="margin-top: -0.25cm"
+                >
+                  Login
+                </mat-button-toggle>
+                <mat-button-toggle value="SignUp" style="margin-top: -0.25cm">
+                  Signup
+                </mat-button-toggle>
+              </mat-button-toggle-group>
+            </div>
+
+            <!-- Login Form -->
+            <form
+              [formGroup]="loginForm"
+              (ngSubmit)="login(loginForm)"
+              *ngIf="toggleBtn.value == 'Login'"
+            >
+              <input
+                type="text"
+                formControlName="emailId"
+                id="login"
+                class="fadeIn second"
+                name="login"
+                placeholder="Email Id"
+              />
+              <input
+                type="password"
+                formControlName="userPassword"
+                id="password"
+                class="fadeIn third"
+                name="SignUp"
+                placeholder="password"
+              />
+              <button
+                type="submit"
+                class="fadeIn fourth"
+                value="Log In"
+                [disabled]="loginForm.invalid"
+                style="margin-top: 0.8cm; border-radius: 25px"
+                class="btn"
+                (click)="onClick()"
+                [ngClass]="{ disabled: loading }"
+              >
+                {{ loading ? "Loading..." : "Log In" }}
+              </button>
+            </form>
+            <form
+              [formGroup]="signupForm"
+              (ngSubmit)="signup(signupForm)"
+              *ngIf="toggleBtn.value == 'SignUp'"
+            >
+              <input
+                type="text"
+                formControlName="userFirstName"
+                class="fadeIn second"
+                name="login"
+                placeholder="First Name"
+              />
+              <input
+                type="text"
+                formControlName="userLastName"
+                class="fadeIn second"
+                name="login"
+                placeholder="Last Name"
+              />
+              <input
+                type="email"
+                formControlName="emailId"
+                class="fadeIn second"
+                name="login"
+                placeholder="Email Id"
+              />
+              <input
+                type="number"
+                formControlName="mobileNo"
+                class="fadeIn second"
+                name="login"
+                placeholder="Mobile Number"
+              />
+              <input
+                type="password"
+                formControlName="userPassword"
+                class="fadeIn third"
+                name="login"
+                placeholder="password"
+              />
+              <button
+                type="submit"
+                class="fadeIn fourth"
+                value="Sign Up"
+                [disabled]="signupForm.invalid"
+                style="margin-top: 0.8cm; border-radius: 25px"
+                (click)="onClick()"
+                [ngClass]="{ disabled: loading }"
+              >
+                {{ loading ? "Loading..." : "Sign Up" }}
+              </button>
+            </form>
+
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+              <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <img src="/assets/loginIMG1.png" height="230" class="Img" />
+      </td>
+    </tr>
+  </table>
+  <app-login-footer></app-login-footer>
+</div>

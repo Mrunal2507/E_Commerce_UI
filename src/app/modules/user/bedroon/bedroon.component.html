@@ -1,0 +1,52 @@
+<pre></pre>
+<div class="grid-container1">
+  <div
+    class="card"
+    id="cart-products"
+    style="width: 15rem"
+    *ngFor="let product of CompanyProductsList"
+  >
+    <img
+      id="card-img"
+      style="padding: 1"
+      src="/assets/File/{{ product.productImagePath }}"
+      height="220"
+      width="240"
+    />
+    <div class="card-body" style="text-align: center">
+      <a href="" style="text-decoration: none; color: rgb(36, 120, 154)">{{
+        product.productName
+      }}</a>
+      <div>{{ product.productPrice | currency : "INR" }}</div>
+      <div *ngIf="product.productPrice < 5000" class="best-seller">
+        Best Seller
+      </div>
+      <pre></pre>
+      <button
+        mat-raised-button
+        style="background-color: #300a77; color: white"
+        (click)="addtoCart(product)"
+      >
+        Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+<pre></pre>
+<pre></pre>
+<pre></pre>
+<h3 style="color: red; text-align: center; font-weight: 500">Coming Soon</h3>
+<h1 style="text-align: center; font-size: xx-large; font-weight: 550">
+  <span style="color: red">Rent</span> and Buy as you go!
+</h1>
+<pre></pre>
+<div style="background-color: rgb(235, 234, 234)">
+  <img
+    src="/assets/edit.jpg"
+    style="height: 50%; width: 75%; margin-left: 13%"
+  />
+</div>
+<pre></pre>
+<pre></pre>
+<pre></pre>
+<img src="/assets/banner3.jpg" style="height: 35%; width: 100%" />

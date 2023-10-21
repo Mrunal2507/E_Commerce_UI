@@ -1,0 +1,73 @@
+<pre></pre>
+<h1 style="margin-left: 12.7cm"><b>POST YOUR AD</b></h1>
+<div class="container">
+  <form [formGroup]="AddProductForm" (ngSubmit)="AddProduct(AddProductForm)">
+    <div class="form-field">
+      <mat-form-field appearance="outline">
+        <mat-label>UserProduct Name</mat-label>
+
+        <input
+          matInput
+          type="text"
+          formControlName="userProductName"
+          placeholder="UserProduct Name"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+
+        <input
+          matInput
+          type="number"
+          formControlName="userProductPrice"
+          placeholder="UserProduct Price"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+
+        <input
+          matInput
+          type="text"
+          formControlName="description"
+          placeholder="Description"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+
+        <input
+          matInput
+          type="text"
+          formControlName="category"
+          placeholder="Category"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-label>Select File</mat-label>
+      <input type="file" (change)="onFileSelected($event)" />
+    </div>
+    <br />
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      (click)="onClick()"
+      [ngClass]="{ disabled: loading }"
+    >
+      {{ loading ? "Loading..." : "Submit" }}
+    </button>
+  </form>
+</div>

@@ -1,0 +1,143 @@
+<table style="width: 100%">
+  <tr
+    style="
+      background-color: #300a77;
+      color: white;
+      font-size: medium;
+      vertical-align: text-top;
+    "
+    *ngIf="isH1Visible"
+  >
+    <td>
+      <p
+        class="text-white text-center"
+        style="margin-top: 0.08cm; margin-bottom: -0.1cm; font-weight: 500"
+      >
+        Exclusive Offer - Additional 20% OFF. Use Code "MAPLE20"
+      </p>
+    </td>
+    <td>
+      <a (click)="closeH1()" style="color: white">x</a>
+    </td>
+  </tr>
+</table>
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light"
+  style="
+    position: sticky;
+    z-index: 999;
+    top: -10px;
+    box-shadow: -6px 5px 5px rgba(151, 151, 151, 0.5);
+    height: 1.5cm;
+  "
+>
+  <div style="padding-left: 2%">
+    <img
+      src="/assets/fLOGO1.png"
+      width="128px"
+      height="50px"
+      routerLink="/user/home"
+      style="margin-top: 0.13cm"
+    />
+  </div>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding-left: 8%">
+      <li
+        class="lvl1 parent megamenu"
+        style="
+          margin-top: 0.65cm;
+          width: 3cm;
+          text-align: center;
+          height: 0.85cm;
+        "
+      >
+        <a
+          routerLink="/user/living"
+          [class.active]="isActive[0]"
+          (click)="activateButton(0)"
+          >LIVING ROOM</a
+        >
+      </li>
+      <li
+        class="lvl1 parent megamenu"
+        style="margin-top: 0.65cm; width: 3cm; text-align: center"
+      >
+        <a
+          routerLink="/user/bedroom"
+          [class.active]="isActive[1]"
+          (click)="activateButton(1)"
+          >BEDROOM</a
+        >
+      </li>
+      <li
+        class="lvl1 parent megamenu"
+        style="margin-top: 0.65cm; width: 3cm; text-align: center"
+      >
+        <a
+          routerLink="/user/dining"
+          [class.active]="isActive[2]"
+          (click)="activateButton(2)"
+          >DINING ROOM</a
+        >
+      </li>
+      <li
+        class="lvl1 parent megamenu"
+        style="margin-top: 0.65cm; width: 3cm; text-align: center"
+      >
+        <a
+          routerLink="/user/storage"
+          [class.active]="isActive[3]"
+          (click)="activateButton(3)"
+          >STORAGE</a
+        >
+      </li>
+      <li>
+        <img
+          src="/assets/search.png"
+          height="21"
+          style="margin-top: 0.6cm; margin-left: 4.2cm"
+        />
+      </li>
+      <li style="margin-left: -0.2cm">
+        <a mat-button *ngIf="!isLoggegIn" (click)="loginbutton()"
+          ><img src="/assets/user.png" height="20" style="margin-top: 0.75cm"
+        /></a>
+        <button
+          *ngIf="isLoggegIn"
+          mat-button
+          [matMenuTriggerFor]="menu"
+          style="margin-left: -0.2cm; margin-top: 0.4cm"
+          class="xy"
+        >
+          {{ userName | uppercase }}
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/user/profile">Profie</button>
+          <button mat-menu-item routerLink="/user/order">Orders</button>
+          <button mat-menu-item routerLink="/user/post">Requests</button>
+          <button mat-menu-item (click)="logoutbutton()">Logout</button>
+        </mat-menu>
+      </li>
+      <li>
+        <img
+          src="/assets/shopping-cart.png"
+          height="23"
+          style="margin-top: 0.45cm; margin-left: -0.45cm"
+          *ngIf="isLoggegIn"
+          routerLink="/user/cart"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/sell.png"
+          height="50"
+          style="margin-top: 0.2cm"
+          *ngIf="isLoggegIn"
+          routerLink="/user/sellproduct"
+        />
+      </li>
+    </ul>
+  </div>
+</nav>
+<pre></pre>

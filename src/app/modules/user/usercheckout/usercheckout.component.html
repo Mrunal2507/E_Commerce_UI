@@ -1,0 +1,43 @@
+<h3><b>PREFERRED PAYMENT</b></h3>
+<pre></pre>
+<label>
+  <img src="/assets/gPay.png" height="24" />
+  Google Pay
+  <input
+    type="radio"
+    [(ngModel)]="radioButtonSelected"
+    (change)="toggleRadioButton()"
+    style="margin-left: 0.5cm"
+  />
+</label>
+
+<div *ngIf="radioButtonSelected">
+  <button class="btn btn-primary" (click)="checkout()" (click)="removeAll()">
+    Pay {{ cart.totalCost | currency : "INR" }}
+  </button>
+</div>
+
+<div style="margin-left: 1cm; margin-top: 0.7cm">
+  Credit/Debit Card
+  <input type="radio" disabled style="margin-left: 0.2cm" />
+</div>
+
+<div style="margin-left: 1cm; margin-top: 1cm">
+  Net Banking
+  <input type="radio" disabled style="margin-left: 1.05cm" />
+</div>
+
+<div style="margin-left: 1cm; margin-top: 1cm">
+  Wallets
+  <input type="radio" disabled style="margin-left: 1.85cm" />
+</div>
+
+<div style="margin-left: 1cm; margin-top: 1cm">
+  Cash on Delivery
+  <input
+    type="radio"
+    (click)="checkout()"
+    (click)="removeAll()"
+    style="margin-left: 0.3cm"
+  />
+</div>

@@ -1,0 +1,21 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 4 px;
+    /* padding: 10px; */
+
+    /* background-color: rgb(217, 221, 234); */
+    margin-left: 10%;
+
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 3 px;
+    /* padding: 10px;  */
+
+    /* background-color: rgb(193, 193, 193);  */
+    margin-left: 5%;
+
+}

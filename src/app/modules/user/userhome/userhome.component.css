@@ -1,0 +1,70 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 4 px;
+    /* padding: 10px; */
+
+    /* background-color: rgb(217, 221, 234); */
+    margin-left: 10%;
+
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 3 px;
+    /* padding: 10px;  */
+
+    /* background-color: rgb(193, 193, 193);  */
+    margin-left: 5%;
+
+}
+
+.card{
+    margin-top: 0.8cm;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.best-seller {
+    position: absolute;
+    inset: 0 auto auto 0;
+    background: rgb(225, 120, 1);
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: larger;
+    padding: 3px 20px 3px 10px;
+    z-index: 10;
+    border-radius: 10px 0px 70px 0px;
+}
+
+#card-img {
+    height: 170px;
+    width: 100%;
+    padding: 8px 8px 8px 8px;
+}
+
+#card-img:hover{
+    transform: scale(1.3);
+}
+
+.btn{
+    margin-left: 45%;
+    background-color: #300a77;
+    border-color: #300a77;
+}
+
+.btn:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+section{
+    background-image: url(https://d3juy0zp6vqec8.cloudfront.net/images/bg-banner.webp);
+}
+
+

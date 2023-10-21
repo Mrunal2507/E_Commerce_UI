@@ -1,0 +1,20 @@
+h3{
+    margin-left: 1cm;
+    margin-top: 1cm;
+}
+
+.btn{
+    margin-left: 10%;
+    background-color: #300a77;
+    border-color: #300a77;
+}
+
+.btn:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+label{
+    margin-left: 1cm;
+}
